@@ -84,4 +84,4 @@ class NewsManagerPDO extends NewsManager
     }
 }
 
-?>
+

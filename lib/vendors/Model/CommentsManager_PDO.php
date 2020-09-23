@@ -75,4 +75,4 @@ class CommentsManager_PDO extends CommentsManager
     }
 }
 
-?>
+

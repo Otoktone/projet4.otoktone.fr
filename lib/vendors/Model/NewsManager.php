@@ -69,4 +69,4 @@ abstract class NewsManager extends Manager
     abstract protected function modify(News $news);
 }
 
-?>
+

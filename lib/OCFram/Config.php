@@ -30,4 +30,4 @@ class Config extends ApplicationComponent
     }
 }
 
-?>
+

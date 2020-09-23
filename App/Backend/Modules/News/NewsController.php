@@ -134,4 +134,4 @@ class NewsController extends BackController
     }
 }
 
-?>
+

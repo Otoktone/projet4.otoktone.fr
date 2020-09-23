@@ -42,4 +42,4 @@ class NewsFormBuilder extends FormBuilder
     }
 }
 
-?>
+

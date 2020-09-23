@@ -93,4 +93,4 @@ class News extends Entity
     }
 }
 
-?>
+

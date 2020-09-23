@@ -67,4 +67,4 @@ abstract class CommentsManager extends Manager
     abstract public function get($id);
 }
 
-?>
+

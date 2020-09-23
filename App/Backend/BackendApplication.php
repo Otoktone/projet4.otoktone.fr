@@ -31,4 +31,4 @@ class BackendApplication extends Application
     }
 }
 
-?>
+
