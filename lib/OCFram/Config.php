@@ -1,5 +1,4 @@
 <?php
-
 namespace OCFram;
 
 class Config extends ApplicationComponent
@@ -17,7 +16,7 @@ class Config extends ApplicationComponent
 
             foreach ($elements as $element)
             {
-                $this->vars[$elements->getAttribute('var')] = $element->getAttribute('value');
+                $this->vars[$element->getAttribute('var')] = $element->getAttribute('value');
             }
         }
 
@@ -29,5 +28,3 @@ class Config extends ApplicationComponent
         return null;
     }
 }
-
-

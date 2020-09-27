@@ -1,5 +1,4 @@
 <?php
-
 namespace OCFram;
 
 abstract class Field
@@ -41,9 +40,19 @@ abstract class Field
         return $this->label;
     }
 
+    public function length()
+    {
+        return $this->length;
+    }
+
     public function name()
     {
         return $this->name;
+    }
+
+    public function validators()
+    {
+        return $this->validators;
     }
 
     public function value()
@@ -56,6 +65,16 @@ abstract class Field
         if (is_string($label))
         {
             $this->label = $label;
+        }
+    }
+
+    public function setLength($length)
+    {
+        $length = (int) $length;
+
+        if ($length > 0)
+        {
+            $this->length = $length;
         }
     }
 
@@ -78,7 +97,7 @@ abstract class Field
         }
     }
 
-    public function setValute($value)
+    public function setValue($value)
     {
         if (is_string($value))
         {
@@ -86,5 +105,3 @@ abstract class Field
         }
     }
 }
-
-

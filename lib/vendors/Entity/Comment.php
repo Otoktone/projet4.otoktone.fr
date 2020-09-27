@@ -1,5 +1,4 @@
 <?php
-
 namespace Entity;
 
 use \OCFram\Entity;
@@ -7,9 +6,9 @@ use \OCFram\Entity;
 class Comment extends Entity
 {
     protected $news,
-              $auteur,
-              $contenu,
-              $date;
+        $auteur,
+        $contenu,
+        $date;
 
     const AUTEUR_INVALIDE = 1;
     const CONTENU_INVALIDE = 2;
@@ -68,7 +67,4 @@ class Comment extends Entity
     {
         return $this->date;
     }
-
 }
-
-

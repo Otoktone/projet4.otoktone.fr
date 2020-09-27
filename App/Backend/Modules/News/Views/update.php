@@ -1,8 +1,8 @@
 <h2>Modifier une news</h2>
 <form action="" method="post">
-  <p>
-    <?= $form ?>
+    <p>
+        <?= $form ?>
 
-    <input type="submit" value="Modifier" />
-  </p>
+        <input type="submit" value="Modifier" />
+    </p>
 </form>

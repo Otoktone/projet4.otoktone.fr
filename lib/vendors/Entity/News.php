@@ -1,5 +1,4 @@
 <?php
-
 namespace Entity;
 
 use \OCFram\Entity;
@@ -7,10 +6,10 @@ use \OCFram\Entity;
 class News extends Entity
 {
     protected $auteur,
-              $titre,
-              $contenu,
-              $dateAjout,
-              $dateModif;
+        $titre,
+        $contenu,
+        $dateAjout,
+        $dateModif;
 
     const AUTEUR_INVALIDE = 1;
     const TITRE_INVALIDE = 2;
@@ -46,7 +45,7 @@ class News extends Entity
 
     public function setContenu($contenu)
     {
-        if (!is_string($contenu) || empty($titre))
+        if (!is_string($contenu) || empty($contenu))
         {
             $this->erreurs[] = self::CONTENU_INVALIDE;
         }
@@ -63,7 +62,6 @@ class News extends Entity
     {
         $this->dateModif = $dateModif;
     }
-
 
     // GETTERS //
 
@@ -92,5 +90,3 @@ class News extends Entity
         return $this->dateModif;
     }
 }
-
-

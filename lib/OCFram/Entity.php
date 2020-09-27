@@ -1,14 +1,12 @@
 <?php
-
 namespace OCFram;
 
-class Entity implements \ArrayAccess
+abstract class Entity implements \ArrayAccess
 {
-    // Utilisation du trait Hydrator pour que nos entités puissent être hydratée
     use Hydrator;
 
-    protected $erreurs = [];
-    protected $id;
+    protected $erreurs = [],
+        $id;
 
     public function __construct(array $donnees = [])
     {
@@ -33,7 +31,7 @@ class Entity implements \ArrayAccess
         return $this->id;
     }
 
-    public function setId()
+    public function setId($id)
     {
         $this->id = (int) $id;
     }
@@ -66,5 +64,3 @@ class Entity implements \ArrayAccess
         throw new \Exception('Impossible de supprimer une quelconque valeur');
     }
 }
-
-

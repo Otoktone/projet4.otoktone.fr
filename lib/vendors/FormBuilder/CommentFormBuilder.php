@@ -1,5 +1,4 @@
 <?php
-
 namespace FormBuilder;
 
 use \OCFram\FormBuilder;
@@ -16,21 +15,19 @@ class CommentFormBuilder extends FormBuilder
             'label' => 'Auteur',
             'name' => 'auteur',
             'maxLength' => 50,
-            'validator' => [
-                new MaxLengthValidator('L\'auteur spécifié et trop long (50 caractères max)', 50),
+            'validators' => [
+                new MaxLengthValidator('L\'auteur spécifié est trop long (50 caractères maximum)', 50),
                 new NotNullValidator('Merci de spécifier l\'auteur du commentaire'),
             ],
         ]))
-        ->add(new TextField([
-            'label' => 'Contenu',
-            'name' => 'contenu',
-            'rows' => 7,
-            'cols' => 50,
-            'validators' => [
-                new NotNullValidator('Merci de spécifier votre commentaire'),
-            ],
-        ]));
+            ->add(new TextField([
+                'label' => 'Contenu',
+                'name' => 'contenu',
+                'rows' => 7,
+                'cols' => 50,
+                'validators' => [
+                    new NotNullValidator('Merci de spécifier votre commentaire'),
+                ],
+            ]));
     }
 }
-
-

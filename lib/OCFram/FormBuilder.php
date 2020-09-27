@@ -1,5 +1,4 @@
 <?php
-
 namespace OCFram;
 
 abstract class FormBuilder
@@ -23,5 +22,3 @@ abstract class FormBuilder
         return $this->form;
     }
 }
-
-

@@ -1,5 +1,4 @@
 <?php
-
 namespace OCFram;
 
 class StringField extends Field
@@ -15,7 +14,7 @@ class StringField extends Field
             $widget .= $this->errorMessage.'<br />';
         }
 
-        $widget .= '<label>'. $this->label.'</label><input type="text" name="'.$this->name.'"';
+        $widget .= '<label>'.$this->label.'</label><input type="text" name="'.$this->name.'"';
 
         if (!empty($this->value))
         {
@@ -24,7 +23,7 @@ class StringField extends Field
 
         if (!empty($this->maxLength))
         {
-            $widget .= ' maxLength="'.$this->maxLength.'"';
+            $widget .= ' maxlength="'.$this->maxLength.'"';
         }
 
         return $widget .= ' />';
@@ -40,9 +39,7 @@ class StringField extends Field
         }
         else
         {
-            throw new \RuntimeException('La longueur maximale doit être un nombre supérieure à 0');
+            throw new \RuntimeException('La longueur maximale doit être un nombre supérieur à 0');
         }
     }
 }
-
-

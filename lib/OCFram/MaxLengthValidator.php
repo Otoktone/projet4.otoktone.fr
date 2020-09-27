@@ -1,5 +1,4 @@
 <?php
-
 namespace OCFram;
 
 class MaxLengthValidator extends Validator
@@ -28,9 +27,7 @@ class MaxLengthValidator extends Validator
         }
         else
         {
-            throw new \RuntimeException('La longeur maximale doit être un nombre supérieur à 0');
+            throw new \RuntimeException('La longueur maximale doit être un nombre supérieur à 0');
         }
     }
 }
-
-

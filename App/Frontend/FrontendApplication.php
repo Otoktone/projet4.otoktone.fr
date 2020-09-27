@@ -1,6 +1,5 @@
 <?php
-
-namespace App\Fronted;
+namespace App\Frontend;
 
 use \OCFram\Application;
 
@@ -22,5 +21,3 @@ class FrontendApplication extends Application
         $this->httpResponse->send();
     }
 }
-
-

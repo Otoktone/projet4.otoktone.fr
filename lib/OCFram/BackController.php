@@ -1,8 +1,7 @@
 <?php
-
 namespace OCFram;
 
-class BackController extends ApplicationComponent
+abstract class BackController extends ApplicationComponent
 {
     protected $action = '';
     protected $module = '';
@@ -28,7 +27,7 @@ class BackController extends ApplicationComponent
 
         if (!is_callable([$this, $method]))
         {
-            throw new \RuntimeException('L\'action "'. $this->action.'" n\'est pas définie sur ce module.');
+            throw new \RuntimeException('L\'action "'.$this->action.'" n\'est pas définie sur ce module');
         }
 
         $this->$method($this->app->httpRequest());
@@ -43,7 +42,7 @@ class BackController extends ApplicationComponent
     {
         if (!is_string($module) || empty($module))
         {
-            throw new \InvalidArgumentException('Le module doit être une chaîne de caractère valide.');
+            throw new \InvalidArgumentException('Le module doit être une chaine de caractères valide');
         }
 
         $this->module = $module;
@@ -53,7 +52,7 @@ class BackController extends ApplicationComponent
     {
         if (!is_string($action) || empty($action))
         {
-            throw new \InvalidArgumentException('L\'action doit être une chaîne de caractère valide.');
+            throw new \InvalidArgumentException('L\'action doit être une chaine de caractères valide');
         }
 
         $this->action = $action;
@@ -63,7 +62,7 @@ class BackController extends ApplicationComponent
     {
         if (!is_string($view) || empty($view))
         {
-            throw new \InvalidArgumentException('La vue doit être une chaîne de caractère valide.');
+            throw new \InvalidArgumentException('La vue doit être une chaine de caractères valide');
         }
 
         $this->view = $view;
@@ -71,5 +70,3 @@ class BackController extends ApplicationComponent
         $this->page->setContentFile(__DIR__.'/../../App/'.$this->app->name().'/Modules/'.$this->module.'/Views/'.$this->view.'.php');
     }
 }
-
-

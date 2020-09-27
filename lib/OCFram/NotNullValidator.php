@@ -1,5 +1,4 @@
 <?php
-
 namespace OCFram;
 
 class NotNullValidator extends Validator
@@ -9,5 +8,3 @@ class NotNullValidator extends Validator
         return $value != '';
     }
 }
-
-

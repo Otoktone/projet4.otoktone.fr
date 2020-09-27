@@ -20,25 +20,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="975638e9-56e8-452d-be9c-815300ef45b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/projet4.otoktone.fr.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Backend/BackendApplication.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backend/BackendApplication.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Backend/Config/app.xml" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backend/Config/app.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Backend/Config/routes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backend/Config/routes.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Backend/Modules/Connexion/ConnexionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backend/Modules/Connexion/ConnexionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Backend/Modules/Connexion/Views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backend/Modules/Connexion/Views/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Backend/Modules/News/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backend/Modules/News/NewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Backend/Templates/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backend/Templates/layout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Backend/Modules/News/Views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backend/Modules/News/Views/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Backend/Modules/News/Views/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backend/Modules/News/Views/insert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Backend/Modules/News/Views/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backend/Modules/News/Views/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Backend/Modules/News/Views/updateComment.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Backend/Modules/News/Views/updateComment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Frontend/Config/app.xml" beforeDir="false" afterPath="$PROJECT_DIR$/App/Frontend/Config/app.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Frontend/Config/routes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/App/Frontend/Config/routes.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Frontend/FrontendApplication.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Frontend/FrontendApplication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Frontend/Modules/News/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Frontend/Modules/News/NewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Frontend/Modules/News/NewsController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Frontend/Modules/News/Views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Frontend/Modules/News/Views/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Frontend/Modules/News/Views/insertComment.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Frontend/Modules/News/Views/insertComment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Frontend/Modules/News/Views/show.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Frontend/Modules/News/Views/show.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Frontend/Templates/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Frontend/Templates/layout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DWJ4.dia" beforeDir="false" afterPath="$PROJECT_DIR$/DWJ4.dia" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DWJ4.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Errors/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/Errors/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/Web/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/Web/bootstrap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/OCFram/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/OCFram/Application.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/OCFram/ApplicationComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/OCFram/ApplicationComponent.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/OCFram/BackController.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/OCFram/BackController.php" afterDir="false" />
@@ -59,6 +65,7 @@
       <change beforePath="$PROJECT_DIR$/lib/OCFram/Page.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/OCFram/Page.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/OCFram/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/OCFram/Route.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/OCFram/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/OCFram/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/OCFram/SplClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/OCFram/SplClassLoader.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/OCFram/StringField.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/OCFram/StringField.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/OCFram/TextField.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/OCFram/TextField.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/OCFram/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/OCFram/User.php" afterDir="false" />
@@ -68,7 +75,7 @@
       <change beforePath="$PROJECT_DIR$/lib/vendors/FormBuilder/CommentFormBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/vendors/FormBuilder/CommentFormBuilder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/vendors/FormBuilder/NewsFormBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/vendors/FormBuilder/NewsFormBuilder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/vendors/Model/CommentsManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/vendors/Model/CommentsManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/vendors/Model/CommentsManager_PDO.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/vendors/Model/CommentsManager_PDO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/vendors/Model/CommentsManager_PDO.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/vendors/Model/NewsManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/vendors/Model/NewsManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/vendors/Model/NewsManagerPDO.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/vendors/Model/NewsManagerPDO.php" afterDir="false" />
     </list>
@@ -84,6 +91,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1htj35RvQQFpLQE5NpVpAXD62wL" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -103,7 +113,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600837080793</updated>
-      <workItem from="1600837083192" duration="4144000" />
+      <workItem from="1600837083192" duration="13704000" />
+      <workItem from="1601014344171" duration="634000" />
+      <workItem from="1601018618206" duration="9695000" />
+      <workItem from="1601106644444" duration="14645000" />
+      <workItem from="1601189352247" duration="2989000" />
     </task>
     <servers />
   </component>
@@ -120,5 +134,16 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1600854070239">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1600854070239" />
+    <state x="471" y="14" width="578" height="801" key="find.popup" timestamp="1601192344985">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="471" y="14" width="578" height="801" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1601192344985" />
   </component>
 </project>

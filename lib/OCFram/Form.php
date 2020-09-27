@@ -1,5 +1,4 @@
 <?php
-
 namespace OCFram;
 
 class Form
@@ -14,10 +13,10 @@ class Form
 
     public function add(Field $field)
     {
-        $attr = $field->name(); // On récupère le nom du champ
-        $field->setValue($this->entity->$attr()); // On assigne la valeur correspondante au champ
+        $attr = $field->name(); // On récupère le nom du champ.
+        $field->setValue($this->entity->$attr()); // On assigne la valeur correspondante au champ.
 
-        $this->fields[] = $field;
+        $this->fields[] = $field; // On ajoute le champ passé en argument à la liste des champs.
         return $this;
     }
 
@@ -25,7 +24,7 @@ class Form
     {
         $view = '';
 
-        // On génère un par un les champs du formulaire
+        // On génère un par un les champs du formulaire.
         foreach ($this->fields as $field)
         {
             $view .= $field->buildWidget().'<br />';
@@ -38,7 +37,7 @@ class Form
     {
         $valid = true;
 
-        // On vérifie que tout les champs sont valides
+        // On vérifie que tous les champs sont valides.
         foreach ($this->fields as $field)
         {
             if (!$field->isValid())
@@ -60,5 +59,3 @@ class Form
         $this->entity = $entity;
     }
 }
-
-

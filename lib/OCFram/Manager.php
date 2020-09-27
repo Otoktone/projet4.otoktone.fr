@@ -1,5 +1,4 @@
 <?php
-
 namespace OCFram;
 
 abstract class Manager
@@ -11,5 +10,3 @@ abstract class Manager
         $this->dao = $dao;
     }
 }
-
-

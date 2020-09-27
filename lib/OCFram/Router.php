@@ -1,5 +1,4 @@
 <?php
-
 namespace OCFram;
 
 class Router
@@ -23,7 +22,7 @@ class Router
             // Si la route correspond à l'URL
             if (($varsValues = $route->match($url)) !== false)
             {
-                // Si elle a des vaariables
+                // Si elle a des variables
                 if ($route->hasVars())
                 {
                     $varsNames = $route->varsNames();
@@ -33,15 +32,14 @@ class Router
                     // (clé = nom de la variable, valeur = sa valeur)
                     foreach ($varsValues as $key => $match)
                     {
-                        // La première valeur contient entièrement la chaîne capturée
-                        // (voir doc sur preg_match)
+                        // La première valeur contient entièrement la chaine capturée (voir la doc sur preg_match)
                         if ($key !== 0)
                         {
                             $listVars[$varsNames[$key - 1]] = $match;
                         }
                     }
 
-                    // On assigne ce tableau de variables à la route
+                    // On assigne ce tableau de variables � la route
                     $route->setVars($listVars);
                 }
 
@@ -52,5 +50,3 @@ class Router
         throw new \RuntimeException('Aucune route ne correspond à l\'URL', self::NO_ROUTE);
     }
 }
-
-

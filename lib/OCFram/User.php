@@ -1,5 +1,4 @@
 <?php
-
 namespace OCFram;
 
 session_start();
@@ -49,5 +48,3 @@ class User
         $_SESSION['flash'] = $value;
     }
 }
-
-

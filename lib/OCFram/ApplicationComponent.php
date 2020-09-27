@@ -1,7 +1,5 @@
 <?php
-
 namespace OCFram;
-
 
 abstract class ApplicationComponent
 {
@@ -14,8 +12,6 @@ abstract class ApplicationComponent
 
     public function app()
     {
-        return $this->$app;
+        return $this->app;
     }
 }
-
-

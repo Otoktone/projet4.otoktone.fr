@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Frontend\Modules\News;
 
 use \OCFram\BackController;
@@ -15,10 +14,10 @@ class NewsController extends BackController
         $nombreNews = $this->app->config()->get('nombre_news');
         $nombreCaracteres = $this->app->config()->get('nombre_caracteres');
 
-        // On ajoute une définition pour le titre
-        $this->page->addVar('title', 'Liste des '.$nombreNews.' dernières News');
+        // On ajoute une définition pour le titre.
+        $this->page->addVar('title', 'Liste des '.$nombreNews.' dernières news');
 
-        // On récupère le manager des news
+        // On récupère le manager des news.
         $manager = $this->managers->getManagerOf('News');
 
         $listeNews = $manager->getList(0, $nombreNews);
@@ -34,7 +33,7 @@ class NewsController extends BackController
             }
         }
 
-        // On ajoute la variable $listeNews à la vue
+        // On ajoute la variable $listeNews à la vue.
         $this->page->addVar('listeNews', $listeNews);
     }
 
@@ -49,11 +48,12 @@ class NewsController extends BackController
 
         $this->page->addVar('title', $news->titre());
         $this->page->addVar('news', $news);
+        $this->page->addVar('comments', $this->managers->getManagerOf('Comments')->getListOf($news->id()));
     }
 
     public function executeInsertComment(HTTPRequest $request)
     {
-        // Si le formulaire a été envoyé
+        // Si le formulaire a été envoyé.
         if ($request->method() == 'POST')
         {
             $comment = new Comment([
@@ -76,7 +76,8 @@ class NewsController extends BackController
 
         if ($formHandler->process())
         {
-            $this->app->user()->setFlash('Le commentaire a bien été ajouté');
+            $this->app->user()->setFlash('Le commentaire a bien été ajouté, merci !');
+
             $this->app->httpResponse()->redirect('news-'.$request->getData('news').'.html');
         }
 
@@ -85,5 +86,3 @@ class NewsController extends BackController
         $this->page->addVar('title', 'Ajout d\'un commentaire');
     }
 }
-
-

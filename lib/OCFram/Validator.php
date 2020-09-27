@@ -1,5 +1,4 @@
 <?php
-
 namespace OCFram;
 
 abstract class Validator
@@ -21,10 +20,8 @@ abstract class Validator
         }
     }
 
-    public function errorMessag()
+    public function errorMessage()
     {
         return $this->errorMessage;
     }
 }
-
-

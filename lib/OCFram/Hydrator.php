@@ -1,5 +1,4 @@
 <?php
-
 namespace OCFram;
 
 trait Hydrator
@@ -17,5 +16,3 @@ trait Hydrator
         }
     }
 }
-
-

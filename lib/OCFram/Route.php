@@ -1,5 +1,4 @@
 <?php
-
 namespace OCFram;
 
 class Route
@@ -89,5 +88,3 @@ class Route
         return $this->varsNames;
     }
 }
-
-

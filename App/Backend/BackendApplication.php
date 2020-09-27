@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Backend;
 
 use \OCFram\Application;
@@ -30,5 +29,3 @@ class BackendApplication extends Application
         $this->httpResponse->send();
     }
 }
-
-

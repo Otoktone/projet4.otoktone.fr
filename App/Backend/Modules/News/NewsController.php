@@ -1,11 +1,10 @@
 <?php
-
 namespace App\Backend\Modules\News;
 
 use \OCFram\BackController;
 use \OCFram\HTTPRequest;
-use \Entity\Comment;
 use \Entity\News;
+use \Entity\Comment;
 use \FormBuilder\CommentFormBuilder;
 use \FormBuilder\NewsFormBuilder;
 use \OCFram\FormHandler;
@@ -19,7 +18,7 @@ class NewsController extends BackController
         $this->managers->getManagerOf('News')->delete($newsId);
         $this->managers->getManagerOf('Comments')->deleteFromNews($newsId);
 
-        $this->app->user()->setFlash('La news a bien été supprimée');
+        $this->app->user()->setFlash('La news a bien été supprimée !');
 
         $this->app->httpResponse()->redirect('.');
     }
@@ -28,7 +27,7 @@ class NewsController extends BackController
     {
         $this->managers->getManagerOf('Comments')->delete($request->getData('id'));
 
-        $this->app->user()->setFlash('Le commentaire a bien été supprimé');
+        $this->app->user()->setFlash('Le commentaire a bien été supprimé !');
 
         $this->app->httpResponse()->redirect('.');
     }
@@ -79,10 +78,12 @@ class NewsController extends BackController
 
         $form = $formBuilder->form();
 
-        if ($request->method() == 'POST' && $form->isValid())
+        $formHandler = new FormHandler($form, $this->managers->getManagerOf('Comments'), $request);
+
+        if ($formHandler->process())
         {
-            $this->managers->getManagerOf('Comments')->save($comment);
             $this->app->user()->setFlash('Le commentaire a bien été modifié');
+
             $this->app->httpResponse()->redirect('/admin/');
         }
 
@@ -106,7 +107,7 @@ class NewsController extends BackController
         }
         else
         {
-            // L'identifiant de la news est transmis si on souhaite la modifier
+            // L'identifiant de la news est transmis si on veut la modifier
             if ($request->getExists('id'))
             {
                 $news = $this->managers->getManagerOf('News')->getUnique($request->getData('id'));
@@ -126,12 +127,11 @@ class NewsController extends BackController
 
         if ($formHandler->process())
         {
-            $this->app->user()->setFlash($news->isNew() ? 'La news a bien été ajoutée' : 'La news a bien été modifiée');
+            $this->app->user()->setFlash($news->isNew() ? 'La news a bien été ajoutée !' : 'La news a bien été modifiée !');
+
             $this->app->httpResponse()->redirect('/admin/');
         }
 
         $this->page->addVar('form', $form->createView());
     }
 }
-
-

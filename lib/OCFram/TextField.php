@@ -1,5 +1,4 @@
 <?php
-
 namespace OCFram;
 
 class TextField extends Field
@@ -58,5 +57,3 @@ class TextField extends Field
         }
     }
 }
-
-

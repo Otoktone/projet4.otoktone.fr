@@ -1,5 +1,4 @@
 <?php
-
 namespace OCFram;
 
 class Page extends ApplicationComponent
@@ -11,7 +10,7 @@ class Page extends ApplicationComponent
     {
         if (!is_string($var) || is_numeric($var) || empty($var))
         {
-            throw new \InvalidArgumentException('Le nom de la variable doit être une chaîne de caractères non nulle');
+            throw new \InvalidArgumentException('Le nom de la variable doit être une chaine de caractères non nulle');
         }
 
         $this->vars[$var] = $value;
@@ -33,7 +32,7 @@ class Page extends ApplicationComponent
         $content = ob_get_clean();
 
         ob_start();
-        require __DIR__.'/../../App/'.$this->app->name().'/Template/layout.php';
+        require __DIR__.'/../../App/'.$this->app->name().'/Templates/layout.php';
         return ob_get_clean();
     }
 
@@ -47,5 +46,3 @@ class Page extends ApplicationComponent
         $this->contentFile = $contentFile;
     }
 }
-
-

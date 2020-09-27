@@ -1,8 +1,7 @@
 <?php
-
 namespace OCFram;
 
-class HTTPRequest
+class HTTPRequest extends ApplicationComponent
 {
     public function cookieData($key)
     {
@@ -44,5 +43,3 @@ class HTTPRequest
         return $_SERVER['REQUEST_URI'];
     }
 }
-
-

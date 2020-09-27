@@ -1,5 +1,4 @@
 <?php
-
 namespace Model;
 
 use \Entity\News;
@@ -27,7 +26,7 @@ class NewsManagerPDO extends NewsManager
         $this->dao->exec('DELETE FROM news WHERE id = '.(int) $id);
     }
 
-    public function getList($debut = -1, $limite =-1)
+    public function getList($debut = -1, $limite = -1)
     {
         $sql = 'SELECT id, auteur, titre, contenu, dateAjout, dateModif FROM news ORDER BY id DESC';
 
@@ -83,5 +82,3 @@ class NewsManagerPDO extends NewsManager
         $requete->execute();
     }
 }
-
-
