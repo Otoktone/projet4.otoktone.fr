@@ -21,10 +21,19 @@ foreach ($comments as $comment)
     ?>
     <fieldset>
         <legend>
-            Posté par <strong><?= htmlspecialchars($comment['auteur']) ?></strong> le <?= $comment['date']->format('d/m/Y à H\hi') ?>
+            Posté par <strong><?= htmlspecialchars($comment['auteur']) ?></strong>
+            le <?= $comment['date']->format('d/m/Y à H\hi') ?>
             <?php if ($user->isAuthenticated()) { ?> -
                 <a href="admin/comment-update-<?= $comment['id'] ?>.html">Modifier</a> |
-                <a href="admin/comment-delete-<?= $comment['id'] ?>.html">Supprimer</a>
+                <a href="admin/comment-delete-<?= $comment['id'] ?>.html">Supprimer</a> |
+            <?php } ?>
+            <?php if ($comment->isReport()) { ?>
+                <p>Ce commentaire a été signalé</p>
+            <?php
+            } else { ?>
+            <a href="report-<?= $comment['id'] ?>.html" onclick="return(confirm('Souhaitez-vous signaler ce commentaire ?'));"> Signaler
+                <i class="fas fa-exclamation-triangle"></i>
+            </a>
             <?php } ?>
         </legend>
         <p><?= nl2br(htmlspecialchars($comment['contenu'])) ?></p>

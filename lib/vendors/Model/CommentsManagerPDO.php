@@ -72,4 +72,25 @@ class CommentsManagerPDO extends CommentsManager
 
         return $q->fetch();
     }
+
+    public function setReport(Comment $comment) {
+        $q = $this->dao->prepare('UPDATE comments SET reports = 1 WHERE id = :id');
+        $q->bindValue(':id', (int) $id, \PDO::PARAM_INT);
+        $q->execute();
+    }
+
+    public function getReport()
+    {
+        $report = false;
+
+        $q = $this->dao->query('SELECT * FROM comments WHERE reports = 1');
+        $qReport = $q->fetch(\PDO::FETCH_ASSOC);
+
+        if ($qReport)
+        {
+            $report = true;
+        }
+
+        return $report;
+    }
 }

@@ -1,0 +1,122 @@
+body {
+    font-family: Roboto;
+    margin: 0;
+}
+
+/** -----HEADER----- **/
+
+#wrap header {
+    background-image: url('../images/book.jpg');
+    background-position: center;
+    background-size: cover;
+    border-bottom: 2px solid #888A9A;
+    height: 300px;
+    text-align: center;
+}
+
+#wrap h1 {
+    margin-top: 0;
+    padding-top: 100px;
+}
+
+#wrap h1 a {
+    color: white;
+    font-size: 2em;
+    text-shadow: 1px 1px #D6C4B5;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#wrap header p {
+    color: white;
+    text-shadow: 1px 1px #888A9A;
+}
+
+/** -----NAV----- **/
+
+#wrap nav {
+    background-color: #D6C4B5;
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+
+#wrap nav ul {
+    display: flex;
+    padding-inline-end: 40px;
+}
+
+#wrap nav li {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    height: 20px;
+    list-style-type: none;
+    margin: auto;
+    text-align: center;
+    width: 130px;
+}
+
+#wrap nav li a {
+    font-size: 0.8em;
+    color: #888A9A;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/** -----CONTENT----- **/
+
+#content-wrap {
+    background-color: #D6C4B5;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+#main {
+    background-color: white;
+    border: 2px solid #A6A2A6;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#main h2 {
+    padding-left: 35px;
+    padding-top: 25px;
+    text-shadow: 1px 1px #D6C4B5;
+}
+
+#main h2 a {
+    color: #888A9A;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#main p {
+    border: 2px solid #D6C4B5;
+    border-radius: 5px;
+    color: #A6A2A6;
+    margin-bottom: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 5px;
+}
+
+/** ----- FORM ----- **/
+
+label {
+    display: block;
+}
+
+.tox-tinymce {
+    height: 350px !important;
+}
+
+/** -----FOOTER----- **/
+
+footer {
+    background-color: #D6C4B5;
+    color: white;
+    font-size: 0.8em;
+    height: 50px;
+    padding-top: 35px;
+    text-align: center;
+}
