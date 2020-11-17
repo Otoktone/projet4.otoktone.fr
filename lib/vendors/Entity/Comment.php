@@ -74,7 +74,7 @@ class Comment extends Entity
         return $this->date;
     }
 
-    public function isReport()
+    public function report()
     {
         return $this->report;
     }

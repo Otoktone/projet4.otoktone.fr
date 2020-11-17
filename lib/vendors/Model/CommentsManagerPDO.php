@@ -7,7 +7,7 @@ class CommentsManagerPDO extends CommentsManager
 {
     protected function add(Comment $comment)
     {
-        $q = $this->dao->prepare('INSERT INTO comments SET news = :news, auteur = :auteur, contenu = :contenu, date = NOW()');
+        $q = $this->dao->prepare('INSERT INTO comments SET news = :news, auteur = :auteur, contenu = :contenu, report = 0, date = NOW()');
 
         $q->bindValue(':news', $comment->news(), \PDO::PARAM_INT);
         $q->bindValue(':auteur', $comment->auteur());
@@ -73,13 +73,11 @@ class CommentsManagerPDO extends CommentsManager
         return $q->fetch();
     }
 
-    public function setReport(Comment $comment) {
-        $q = $this->dao->prepare('UPDATE comments SET reports = 1 WHERE id = :id');
-        $q->bindValue(':id', (int) $id, \PDO::PARAM_INT);
-        $q->execute();
+    public function setReport($id) {
+        $this->dao->exec('UPDATE comments SET report = 1 WHERE id = '.(int) $id);
     }
 
-    public function getReport()
+    public function getReport($report)
     {
         $report = false;
 

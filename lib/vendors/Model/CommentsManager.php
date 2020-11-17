@@ -70,5 +70,5 @@ abstract class CommentsManager extends Manager
      * @param $comment Le commentaire à signaler
      * @return void
      */
-    abstract public function setReport(Comment $comment);
+    abstract public function setReport($id);
 }

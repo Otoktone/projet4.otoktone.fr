@@ -27,7 +27,7 @@ foreach ($comments as $comment)
                 <a href="admin/comment-update-<?= $comment['id'] ?>.html">Modifier</a> |
                 <a href="admin/comment-delete-<?= $comment['id'] ?>.html">Supprimer</a> |
             <?php } ?>
-            <?php if ($comment->isReport()) { ?>
+            <?php if ($comment->report()) { ?>
                 <p>Ce commentaire a été signalé</p>
             <?php
             } else { ?>
