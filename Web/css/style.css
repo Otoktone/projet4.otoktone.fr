@@ -76,6 +76,8 @@ body {
     border: 2px solid #A6A2A6;
     border-radius: 5px;
     padding: 5px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 #main h2 {
@@ -101,6 +103,20 @@ body {
     text-align: justify;
 }
 
+#newsList {
+    padding-left: 10%;
+}
+
+#newsList th, td{
+    padding-left: 25px;
+}
+
+#newsList th {
+    padding-bottom: 25px;
+}
+
+
+
 /** ----- FORM ----- **/
 
 label {
@@ -109,6 +125,12 @@ label {
 
 .tox-tinymce {
     height: 350px !important;
+}
+
+/** -----REPORT----- **/
+#report {
+    padding-bottom: 75px;
+    padding-top: 50px;
 }
 
 /** -----FOOTER----- **/

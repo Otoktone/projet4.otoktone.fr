@@ -40,6 +40,12 @@ class NewsController extends BackController
 
         $this->page->addVar('listeNews', $manager->getList());
         $this->page->addVar('nombreNews', $manager->count());
+
+        // Nombre de commentaires signalés
+        $nbReports = $this->managers->getManagerOf('Comments')->countReport();
+
+        // On ajoute la variable $nbReports à la vue.
+        $this->page->addVar('nbReports', $nbReports);
     }
 
     public function executeInsert(HTTPRequest $request)
@@ -133,5 +139,30 @@ class NewsController extends BackController
         }
 
         $this->page->addVar('form', $form->createView());
+    }
+
+    public function executeReported(HTTPRequest $request)
+    {
+
+        // On ajoute une définition pour le titre.
+        $this->page->addVar('title', 'Gestion des commentaires');
+
+        // Nombre de commentaires signalés
+        $nbReports = $this->managers->getManagerOf('Comments')->countReport();
+
+        // On ajoute la variable $nbReports à la vue.
+        $this->page->addVar('nbReports', $nbReports);
+
+        // Liste des commentaires signalés
+        $listReports = $this->managers->getManagerOf('Comments')->getListReport();
+
+        // On ajoute la variable $listReports à la vue
+        $this->page->addVar('listReports', $listReports);
+        //var_dump($listReports);
+    }
+
+    public function executeAcceptComment(HTTPRequest $request)
+    {
+        $this->managers->getManagerOf('Comments')->commentValid($request->getData('id'));
     }
 }

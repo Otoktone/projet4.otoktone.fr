@@ -71,4 +71,23 @@ abstract class CommentsManager extends Manager
      * @return void
      */
     abstract public function setReport($id);
+
+    /**
+     * Méthode retournant une liste de commentaires signalés.
+     * @return array La liste des commentaires signalés. Chaque entrée est une instance de Comment.
+     */
+    abstract public function getListReport();
+
+    /**
+     * Méthode renvoyant le nombre de commentaires singalés.
+     * @return int
+     */
+    abstract public function countReport();
+
+    /**
+     * Méthode permettant d'accepter un commentaire.
+     * @param $id L'identifiant du commentaire à valider
+     * @return void
+     */
+    abstract public function commentValid($id);
 }
