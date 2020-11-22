@@ -1,0 +1,1 @@
+<p>Le commentaire a été validé</p>

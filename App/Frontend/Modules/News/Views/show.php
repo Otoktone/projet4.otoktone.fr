@@ -31,8 +31,8 @@ foreach ($comments as $comment)
                 <p>Ce commentaire a été signalé</p>
             <?php
             } else { ?>
-            <a href="report-<?= $comment['id'] ?>.html" onclick="return(confirm('Souhaitez-vous signaler ce commentaire ?'));"> Signaler
-                <i class="fas fa-exclamation-triangle"></i>
+            <a href="report-<?= $comment['id'] ?>.html"
+               onclick="return(confirm('Souhaitez-vous signaler ce commentaire ?'));"> Signaler
             </a>
             <?php } ?>
         </legend>
@@ -41,5 +41,3 @@ foreach ($comments as $comment)
     <?php
 }
 ?>
-
-<p><a href="commenter-<?= $news['id'] ?>.html">Ajouter un commentaire</a></p>
