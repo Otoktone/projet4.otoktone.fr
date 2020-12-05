@@ -5,23 +5,24 @@
         <?= isset($title) ? $title : 'Jean Forteroche' ?>
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="/Web/css/style.css" type="text/css" />
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="icon" type="image/png" href="/Web/images/favicon.png" />
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
           crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous">
+    </script>
 
 </head>
 
@@ -31,14 +32,17 @@
     <div id="nav">
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a id="logo" class="navbar-brand js-scroll-trigger"href="https://projet4.otoktone.fr">
-                    <img src="images/favicon.png" />
+                <a id="logo" class="navbar-brand js-scroll-trigger" href="https://projet4.otoktone.fr">
+                    <img src="/Web/images/favicon.png" alt="Jean Forteroche favicon" />
                 </a>
                 <button id="menu" class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item mx-0 mx-lg-1">
                             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/">Accueil</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/">Biographie</a>
                         </li>
                         <?php if ($user->isAuthenticated()) { ?>
                         <li class="nav-item mx-0 mx-lg-1">
@@ -84,15 +88,18 @@
             </div>
         </footer>
     </div>
-</body>
 
-<!-- TinyMCE -->
-<script src="https://cdn.tiny.cloud/1/fdyqbwkmyc8zzso65huyvl9bfzaybc9xdgy0pz5qt6qs31qe/tinymce/5/tinymce.min.js"
-        referrerpolicy="origin"></script>
-<script>
-    tinymce.init({
-        selector: '.tinymce textarea'
-    });
-</script>
+    <!-- TinyMCE -->
+    <script src="https://cdn.tiny.cloud/1/fdyqbwkmyc8zzso65huyvl9bfzaybc9xdgy0pz5qt6qs31qe/tinymce/5/tinymce.min.js"
+            referrerpolicy="origin">
+
+    </script>
+    <script>
+        tinymce.init({
+            selector: '.tinymce textarea'
+        });
+    </script>
+
+</body>
 
 </html>
